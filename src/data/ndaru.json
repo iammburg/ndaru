@@ -1,0 +1,551 @@
+{
+    "status": "success",
+    "data": {
+        "id": "65141119bd00b59e1ce0c5d81d5823c8",
+        "personal_info": {
+            "id": "01",
+            "full_name": "Ilham Andaru Prabowo",
+            "title": "Full Stack Developer",
+            "is_open_to_work": true,
+            "contact": {
+                "email": "ilhamprabowo009@gmail.com",
+                "location": {
+                    "city": "Semarang",
+                    "country": "Indonesia",
+                    "full_address": "Semarang, Indonesia"
+                },
+                "social_links": {
+                    "linkedin": {
+                        "url": "https://www.linkedin.com/in/ilham-andaru-prabowo/",
+                        "display": "linkedin.com/in/ilham-andaru-prabowo/"
+                    },
+                    "github": {
+                        "url": "https://github.com/iammburg",
+                        "display": "github.com/iammburg"
+                    }
+                }
+            }
+        },
+        "professional_summary": {
+            "id": "summary_001",
+            "content": "I'm a Full-Stack Developer that currently studying Informatics Engineering at the State Polytechnic of Semarang. Over the past year, I've built several web and mobile projects using Laravel, Node JS, React, and Flutter, and I'm always eager to tackle new challenges.\nDriven by curiosity and a love for clean, maintainable code, I continuously expand my skill set from front-end design to back-end architecture. I thrive in collaborative environments and enjoy turning ideas into real-world applications.",
+            "years_of_experience": 3,
+            "specializations": [
+                "Full-stack Development",
+                "Web Development"
+            ]
+        },
+        "experience": [
+            {
+                "id": "exp_001",
+                "position": "Web Developer Intern",
+                "company": {
+                    "name": "Sadasa Academy (PT Sadasa Akademi Indonesia)",
+                    "location": {
+                        "full_address": "Yogyakarta, Indonesia"
+                    }
+                },
+                "employment_type": "Internship",
+                "start_date": "2022-07",
+                "end_date": "2022-12",
+                "is_current": false,
+                "period_display": "Jul 2022 - Dec 2022",
+                "duration_months": 6,
+                "achievements": [
+                    {
+                        "id": "ach_001",
+                        "description": "Responsible for developing a human resource management web application"
+                    },
+                    {
+                        "id": "ach_002",
+                        "description": "Collaborated with a colleague on a 6 month development cycle to build and enhance the application"
+                    },
+                    {
+                        "id": "ach_003",
+                        "description": "Utilized PHP and the Laravel framework as core technologies"
+                    },
+                    {
+                        "id": "ach_004",
+                        "description": "Implemented MySQL for database management"
+                    },
+                    {
+                        "id": "ach_005",
+                        "description": "Designed and styled the front-end using Bootstrap CSS"
+                    },
+                    {
+                        "id": "ach_006",
+                        "description": "Employed Git for version control and collaboration"
+                    }
+                ]
+            }
+        ],
+        "education": [
+            {
+                "id": "edu_001",
+                "degree": "D3 Informatics Engineering",
+                "degree_type": "Diploma 3",
+                "field_of_study": "Informatics Engineering",
+                "institution": {
+                    "name": "State Polytechnic of Semarang",
+                    "location": {
+                        "city": "Semarang",
+                        "country": "Indonesia",
+                        "full_address": "Semarang, Indonesia"
+                    },
+                    "type": "Polytechnic"
+                },
+                "start_date": "2023",
+                "end_date": "2016",
+                "period_display": "2023 - 2026",
+                "gpa": {
+                    "value": 3.8,
+                    "scale": 4.0,
+                    "display": "GPA: 3.8/4.0"
+                },
+                "status": "In Progress"
+            },
+            {
+                "id": "edu_002",
+                "degree": "Software Engineering (Rekayasa Perangkat Lunak)",
+                "degree_type": "Vocational High School",
+                "field_of_study": "Software Engineering",
+                "institution": {
+                    "name": "SMK Negeri 2 Magelang",
+                    "location": {
+                        "city": "Magelang",
+                        "country": "Indonesia",
+                        "full_address": "Magelang, Indonesia"
+                    },
+                    "type": "Vocational School"
+                },
+                "start_date": "2020",
+                "end_date": "2023",
+                "period_display": "2020 - 2023",
+                "gpa": {
+                    "value": null,
+                    "scale": null,
+                    "display": null
+                },
+                "status": "Graduated"
+            }
+        ],
+        "skills": {
+            "categories": [
+                {
+                    "id": "skill_cat_001",
+                    "name": "Programming Languages",
+                    "items": [
+                        {
+                            "id": "skill_001",
+                            "name": "PHP"
+                        },
+                        {
+                            "id": "skill_002",
+                            "name": "Javascript"
+                        },
+                        {
+                            "id": "skill_003",
+                            "name": "Dart"
+                        },
+                        {
+                            "id": "skill_004",
+                            "name": "Python"
+                        },
+                        {
+                            "id": "skill_005",
+                            "name": "Typescript"
+                        }
+                    ]
+                },
+                {
+                    "id": "skill_cat_002",
+                    "name": "Frontend",
+                    "items": [
+                        {
+                            "id": "skill_006",
+                            "name": "HTML5"
+                        },
+                        {
+                            "id": "skill_007",
+                            "name": "CSS3"
+                        },
+                        {
+                            "id": "skill_008",
+                            "name": "React JS"
+                        },
+                        {
+                            "id": "skill_009",
+                            "name": "Flutter"
+                        },
+                        {
+                            "id": "skill_010",
+                            "name": "Vue.js"
+                        },
+                        {
+                            "id": "skill_011",
+                            "name": "Tailwind CSS"
+                        },
+                        {
+                            "id": "skill_012",
+                            "name": "Bootstrap"
+                        },
+                        {
+                            "id": "skill_013",
+                            "name": "Astro"
+                        }
+                    ]
+                },
+                {
+                    "id": "skill_cat_003",
+                    "name": "Backend",
+                    "items": [
+                        {
+                            "id": "skill_014",
+                            "name": "Laravel"
+                        },
+                        {
+                            "id": "skill_015",
+                            "name": "Node.js"
+                        },
+                        {
+                            "id": "skill_016",
+                            "name": "Express.js"
+                        }
+                    ]
+                },
+                {
+                    "id": "skill_cat_004",
+                    "name": "Databases",
+                    "items": [
+                        {
+                            "id": "skill_017",
+                            "name": "MySQL"
+                        },
+                        {
+                            "id": "skill_018",
+                            "name": "PostgreSQL"
+                        }
+                    ]
+                },
+                {
+                    "id": "skill_cat_005",
+                    "name": "DevOps",
+                    "items": [
+                        {
+                            "id": "skill_019",
+                            "name": "Docker"
+                        },
+                        {
+                            "id": "skill_020",
+                            "name": "GitHub Actions"
+                        }
+                    ]
+                },
+                {
+                    "id": "skill_cat_006",
+                    "name": "Tools",
+                    "items": [
+                        {
+                            "id": "skill_021",
+                            "name": "Git"
+                        },
+                        {
+                            "id": "skill_022",
+                            "name": "VS Code"
+                        },
+                        {
+                            "id": "skill_023",
+                            "name": "Postman"
+                        },
+                        {
+                            "id": "skill_024",
+                            "name": "Figma"
+                        },
+                        {
+                            "id": "skill_025",
+                            "name": "Trello"
+                        }
+                    ]
+                }
+            ]
+        },
+        "certifications": [
+            {
+                "id": "cert_001",
+                "name": "Belajar Membuat Aplikasi Flutter untuk Pemula",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2025-01-30",
+                "expiry_date": "2028-01-30",
+                "year_display": "2025",
+                "credential_id": "EYX4G3WD6ZDL",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/EYX4G3WD6ZDL"
+            },
+            {
+                "id": "cert_002",
+                "name": "Memulai Pemrograman dengan Dart",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2025-01-30",
+                "expiry_date": "2028-01-30",
+                "year_display": "2025",
+                "credential_id": "JLX19M825P72",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/JLX19M825P72"
+            },
+            {
+                "id": "cert_003",
+                "name": "Belajar Membuat Front-End Web untuk Pemula",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2024-11-10",
+                "expiry_date": "2027-11-10",
+                "year_display": "2024",
+                "credential_id": "98XW50J6JPM3",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/98XW50J6JPM3"
+            },
+            {
+                "id": "cert_004",
+                "name": "Belajar Back-End Pemula dengan JavaScript",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2024-07-22",
+                "expiry_date": "2027-07-22",
+                "year_display": "2024",
+                "credential_id": "4EXGQ8VO9ZRL",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/4EXGQ8VO9ZRL"
+            },
+            {
+                "id": "cert_005",
+                "name": "Belajar Dasar Pemrograman Web",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2024-04-14",
+                "expiry_date": "2027-04-14",
+                "year_display": "2024",
+                "credential_id": "L4PQ1MWJOXO1",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/L4PQ1MWJOXO1"
+            },
+            {
+                "id": "cert_006",
+                "name": "Belajar Membuat Aplikasi Web dengan React",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2024-02-25",
+                "expiry_date": "2027-02-25",
+                "year_display": "2024",
+                "credential_id": "N9ZOMEQ46PG5",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/N9ZOMEQ46PG5"
+            },
+            {
+                "id": "cert_007",
+                "name": "Belajar Dasar Pemrograman JavaScript",
+                "issuer": {
+                    "name": "Dicoding Indonesia",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2023-07-30",
+                "expiry_date": "2026-07-30",
+                "year_display": "2023",
+                "credential_id": "07Z6VM1Q2XQR",
+                "status": "active",
+                "verification_url": "https://www.dicoding.com/certificates/07Z6VM1Q2XQR"
+            },
+            {
+                "id": "cert_008",
+                "name": "Web Developer Intern",
+                "issuer": {
+                    "name": "Sadasa Academy (PT Sadasa Akademi Indonesia)",
+                    "organization_type": "technology_company"
+                },
+                "issue_date": "2022",
+                "expiry_date": null,
+                "year_display": "2022",
+                "credential_id": "INS-001/SRT/XII/2021",
+                "status": "active",
+                "verification_url": "https://www.linkedin.com/in/ilham-andaru-prabowo/details/certifications/1712320239821/single-media-viewer/?profileId=ACoAADAg0g8B8ZrpkOn8SylTfoBZpPasmgp0V5g"
+            }
+        ],
+        "projects": [
+            {
+                "id": "proj_001",
+                "name": "Eduwisata Daringan Kesongo",
+                "description": "Creating a management web app for Daringan Kesongo Kultur (Culinary Tourism in Semarang, Central Java)",
+                "status": "in_progress",
+                "start_date": "2024-11",
+                "end_date": null,
+                "technologies": [
+                    {
+                        "id": "tech_001",
+                        "name": "Laravel"
+                    },
+                    {
+                        "id": "tech_002",
+                        "name": "Bootstrap"
+                    }
+                ],
+                "repository": {
+                    "type": null,
+                    "url": null,
+                    "display": null,
+                    "is_public": false
+                }
+            },
+            {
+                "id": "proj_002",
+                "name": "DailyDoa",
+                "description": "A website with 23 collections of Islamic daily prayers.",
+                "status": "in_progress",
+                "start_date": "2024-10",
+                "end_date": null,
+                "technologies": [
+                    {
+                        "id": "tech_003",
+                        "name": "React JS"
+                    },
+                    {
+                        "id": "tech_004",
+                        "name": "Tailwind CSS"
+                    },
+                    {
+                        "id": "tech_005",
+                        "name": "Figma"
+                    }
+                ],
+                "repository": {
+                    "type": "github",
+                    "url": "https://github.com/iammburg/DailyDoa",
+                    "display": "github.com/iammburg/DailyDoa",
+                    "is_public": true
+                }
+            },
+            {
+                "id": "proj_003",
+                "name": "Arena Connect Mobile App (Project Based Learning)",
+                "description": "Arena Connect is a mobile app that helps to find, select and booking sports fields. Easily booking badminton and futsal fields quickly and practically through the application.",
+                "status": "completed",
+                "start_date": "2025-09",
+                "end_date": "2025-01",
+                "technologies": [
+                    {
+                        "id": "tech_006",
+                        "name": "Flutter"
+                    },
+                    {
+                        "id": "tech_007",
+                        "name": "Laravel"
+                    },
+                    {
+                        "id": "tech_008",
+                        "name": "MySQL"
+                    }
+                ],
+                "repository": {
+                    "type": "github",
+                    "url": "https://github.com/iammburg/arena-connect",
+                    "display": "github.com/iammburg/arena-connect",
+                    "is_public": true
+                }
+            },
+            {
+                "id": "proj_004",
+                "name": "Simpatik 3 Landing Page",
+                "description": "Created a landing page for the Simpatik 3 Politeknik Negeri Semarang event",
+                "status": "completed",
+                "start_date": "2024-06",
+                "end_date": "2024-07",
+                "technologies": [
+                    {
+                        "id": "tech_009",
+                        "name": "HTML5"
+                    },
+                    {
+                        "id": "tech_010",
+                        "name": "CSS3"
+                    },
+                    {
+                        "id": "tech_011",
+                        "name": "Bootstrap"
+                    }
+                ],
+                "repository": {
+                    "type": "github",
+                    "url": "https://github.com/iammburg/simpatik-3",
+                    "display": "github.com/iammburg/simpatik-3",
+                    "is_public": true
+                }
+            },
+            {
+                "id": "proj_005",
+                "name": "Submission: Website Development Final Project (Dicoding.com)",
+                "description": "I created a website with the theme of Institut Teknologi Bandung for the submission of the class Learning Basic Web Programming (Belajar Dasar Pemrograman Web) from Dicoding.com",
+                "status": "completed",
+                "start_date": "2024-03",
+                "end_date": "2024-04",
+                "technologies": [
+                    {
+                        "id": "tech_012",
+                        "name": "HTML5"
+                    },
+                    {
+                        "id": "tech_013",
+                        "name": "CSS3"
+                    }
+                ],
+                "repository": {
+                    "type": "github",
+                    "url": "https://github.com/iammburg/profil-institut-teknologi-bandung",
+                    "display": "github.com/iammburg/profil-institut-teknologi-bandung",
+                    "is_public": true
+                }
+            },
+            {
+                "id": "proj_006",
+                "name": "Human Resources Information System",
+                "description": "Web-based Human Resources Information Systems Application made with Laravel.",
+                "status": "completed",
+                "start_date": "2022-07",
+                "end_date": "2022-12",
+                "technologies": [
+                    {
+                        "id": "tech_014",
+                        "name": "Laravel"
+                    },
+                    {
+                        "id": "tech_015",
+                        "name": "Bootstrap"
+                    },
+                    {
+                        "id": "tech_016",
+                        "name": "MySQL"
+                    }
+                ],
+                "repository": {
+                    "type": null,
+                    "url": null,
+                    "display": null,
+                    "is_public": false
+                }
+            }
+        ]
+    },
+    "created_at": "2025-06-28T10:00:00Z",
+    "version": "1.0.0"
+}

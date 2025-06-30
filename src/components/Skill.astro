@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import ndaruData from "../data/ndaru.json";
+const skills = ndaruData.data.skills.categories;
+---
+
+<section class="cv-section" id="technical-skills">
+    <h3 class="section-title">Technical Skills</h3>
+    <div class="skills-list">
+        {
+            skills.map((category) => (
+                <div class="skill-category">
+                    <h4 class="skill-category-title">{category.name}</h4>
+                    <p class="skill-items">{category.items.map((item) => item.name).join(" • ")}</p>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .skills-list {
+        display: block;
+    }
+
+    .skill-category {
+        margin-bottom: 12px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #cecfcf;
+    }
+
+    .skill-category:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .skill-category-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0 0 8px 0;
+    }
+
+    .skill-items {
+        color: #4a5568;
+        line-height: 1.7;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+</style>

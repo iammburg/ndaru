@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import ndaruData from "../data/ndaru.json";
+const certifications = ndaruData.data.certifications;
+---
+
+<section class="cv-section" id="certifications">
+    <h3 class="section-title">Certifications</h3>
+    <div class="certifications-list">
+        {
+            certifications.map((cert) => (
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <a href={cert.verification_url} target="_blank" rel="noopener noreferrer" class="cert-name">
+                            <h4 class="cert-name">{cert.name}</h4>
+                        </a>
+                        <span class="cert-year">{cert.year_display}</span>
+                    </div>
+                    <p class="cert-issuer">{cert.issuer.name}</p>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .certifications-list {
+        display: block;
+    }
+
+    .certification-item {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #cecfcf;
+    }
+
+    .certification-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .cert-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 5px;
+    }
+
+    .cert-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0;
+        flex: 1;
+        text-decoration: none;
+    }
+
+    .cert-year {
+        color: #5a6c7d;
+        font-weight: 600;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .cert-issuer {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        margin: 0;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .cert-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .cert-year {
+            align-self: flex-start;
+        }
+    }
+
+    @media print {
+        .cv-section {
+            break-inside: avoid;
+        }
+
+        .certification-item {
+            break-inside: avoid;
+        }
+    }
+</style>

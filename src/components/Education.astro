@@ -1,0 +1,121 @@
+---
+import "../styles/global.css";
+import ndaruData from "../data/ndaru.json";
+const education = ndaruData.data.education;
+---
+
+<section class="cv-section" id="education">
+    <h3 class="section-title">Educations</h3>
+    {
+        education.map((edu) => (
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-info">
+                        <h4 class="degree">{edu.degree}</h4>
+                        <div class="institution-location">
+                            <span class="institution">{edu.institution.name}</span>
+                            <span class="separator">•</span>
+                            <span class="location">{edu.institution.location.full_address}</span>
+                        </div>
+                    </div>
+                    <div class="education-details">
+                        <span class="period">{edu.period_display}</span>
+                        <span class="gpa">{edu.gpa.display}</span>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    .education-item {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cecfcf;
+    }
+
+    .education-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .education-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .education-info {
+        flex: 1;
+    }
+
+    .degree {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0 0 5px 0;
+    }
+
+    .institution-location {
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        gap: 10px;
+    }
+
+    .institution {
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+    .separator {
+        color: #bdc3c7;
+    }
+
+    .education-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .gpa {
+        font-size: 0.9rem;
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .education-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .institution-location {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .institution-location .separator {
+            display: none;
+        }
+
+        .education-details {
+            align-items: flex-start;
+        }
+    }
+
+    @media print {
+        .cv-section {
+            break-inside: avoid;
+        }
+
+        .education-item {
+            break-inside: avoid;
+        }
+    }
+</style>

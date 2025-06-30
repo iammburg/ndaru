@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+import Header from "./Header.astro";
+import Summary from "./Summary.astro";
+import Experience from "./Experience.astro";
+import Skill from "./Skill.astro";
+import Education from "./Education.astro";
+import Certification from "./Certification.astro";
+import Project from "./Project.astro";
+---
+
+<div class="cv-container">
+    <Header />
+    <main>
+        <Summary />
+        <Experience />
+        <Skill />
+        <Education />
+        <Certification />
+        <Project />
+    </main>
+</div>
+
+<style>
+    .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background: white;
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+        min-height: 100vh;
+    }
+
+    @media (max-width: 768px) {
+        .cv-container {
+            padding: 15px;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cv-container {
+            padding: 10px;
+        }
+    }
+
+    @media print {
+        .cv-container {
+            box-shadow: none;
+            padding: 0;
+            max-width: none;
+        }
+    }
+</style>

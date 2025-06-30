@@ -1,0 +1,113 @@
+---
+import "../styles/global.css";
+import ndaruData from "../data/ndaru.json";
+const experience = ndaruData.data.experience;
+---
+
+<section class="cv-section" id="professional-experience">
+    <h3 class="section-title">Experiences</h3>
+    {
+        experience.map((job) => (
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-info">
+                        <h4 class="job-title">{job.position}</h4>
+                        <div class="company-location">
+                            <span class="company">{job.company.name}</span>
+                            <span class="location">{job.company.location.full_address}</span>
+                        </div>
+                    </div>
+                    <span class="period">{job.period_display}</span>
+                </div>
+                <ul class="achievements">
+                    {job.achievements.map((achievement) => (
+                        <li>{achievement.description}</li>
+                    ))}
+                </ul>
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    .experience-item {
+        margin-bottom: 30px;
+    }
+
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        gap: 20px;
+    }
+
+    .job-info {
+        flex: 1;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0 0 5px 0;
+    }
+
+    .company-location {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        font-size: 0.95rem;
+    }
+
+    .company {
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+    .location {
+        color: #7f8c8d;
+    }
+
+    .period {
+        font-size: 0.9rem;
+        color: #5a6c7d;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .achievements {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .achievements li {
+        margin-bottom: 6px;
+        line-height: 1.6;
+        color: #4a5568;
+    }
+
+    @media (max-width: 768px) {
+        .experience-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .company-location {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+    }
+
+    @media print {
+        .cv-section {
+            break-inside: avoid;
+        }
+
+        .experience-item {
+            break-inside: avoid;
+        }
+    }
+</style>
