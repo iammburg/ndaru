@@ -1,5 +1,6 @@
 ---
 import ndaruData from "../data/ndaru.json";
+import "../styles/json-viewer.css";
 const personalInfo = ndaruData.data.personal_info;
 ---
 
@@ -87,76 +88,27 @@ const personalInfo = ndaruData.data.personal_info;
     </div>
 </header>
 <script is:inline define:vars={{ ndaruData }}>
+    // Inject data to window
     window.ndaruData = ndaruData;
 </script>
+
+<script src="/src/utils/jsonViewer.js"></script>
+
 <script is:inline>
     document.addEventListener("DOMContentLoaded", function () {
-        const btn = document.getElementById("show-json-btn");
-        if (!btn) return;
-        let originalContent = null;
-        let showingJson = false;
-        const jsonData = JSON.stringify(window.ndaruData, null, 2);
+        const triggerBtn = document.getElementById("show-json-btn");
+        if (!triggerBtn) return;
 
-        function syntaxHighlight(json) {
-            if (!json) return "";
-            json = json.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            return json.replace(
-                /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\"])*"(\s*:)?|\b(true|false|null)\b|\d+)/g,
-                function (match) {
-                    let cls = "json-number";
-                    if (/^"/.test(match)) {
-                        if (/:$/.test(match)) {
-                            cls = "json-key";
-                        } else {
-                            cls = "json-string";
-                        }
-                    } else if (/true|false/.test(match)) {
-                        cls = "json-boolean";
-                    } else if (/null/.test(match)) {
-                        cls = "json-null";
-                    }
-                    return `<span class="${cls}">${match}</span>`;
-                }
-            );
-        }
+        const container = document.querySelector(".cv-container");
+        if (!container) return;
 
-        function renderJsonView() {
-            const main = document.querySelector(".cv-container");
-            if (!main) return;
-            if (!originalContent) originalContent = main.innerHTML;
-            main.innerHTML = `
-            <div style='display:flex;justify-content:flex-end;margin-bottom:10px;'>
-                <button id='toggle-cv-btn' class='restore-btn'>Back to CV</button>
-            </div>
-            <pre class="json-api-view">${syntaxHighlight(jsonData)}</pre>`;
-            main.classList.add("json-view");
-            document.getElementById("toggle-cv-btn").onclick = function () {
-                renderCVView();
-            };
-            showingJson = true;
-        }
+        // Initialize JSON Viewer
+        const jsonViewer = new JsonViewer(window.ndaruData, container);
 
-        function renderCVView() {
-            const main = document.querySelector(".cv-container");
-            if (!main || !originalContent) return;
-            main.innerHTML = originalContent;
-            main.classList.remove("json-view");
-            setTimeout(() => {
-                const btn2 = document.getElementById("show-json-btn");
-                if (btn2)
-                    btn2.onclick = function (e) {
-                        e.preventDefault();
-                        renderJsonView();
-                    };
-            }, 0);
-            showingJson = false;
-        }
-
-        btn.onclick = function (e) {
+        // Attach trigger button event
+        triggerBtn.onclick = function (e) {
             e.preventDefault();
-            if (!showingJson) {
-                renderJsonView();
-            }
+            jsonViewer.showJsonView();
         };
     });
 </script>
@@ -213,64 +165,6 @@ const personalInfo = ndaruData.data.personal_info;
         width: 16px;
         height: 16px;
         color: #2c3e50;
-    }
-    .json-api-view {
-        background: #ffffff !important;
-        color: #2c3e50 !important;
-        padding: 24px;
-        border-radius: 12px;
-        font-size: 0.95rem;
-        font-family: "Fira Code", "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro",
-            monospace;
-        overflow-x: auto;
-        max-width: 900px;
-        margin: 0 auto 24px auto;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e1e8ed;
-        line-height: 1.6;
-        word-break: break-word;
-    }
-    .json-key {
-        color: #032f62 !important;
-        font-weight: 600;
-    }
-    .json-string {
-        color: #22863a !important;
-    }
-    .json-number {
-        color: #005cc5 !important;
-        font-weight: 500;
-    }
-    .json-boolean {
-        color: #d73a49 !important;
-        font-weight: 600;
-    }
-    .json-null {
-        color: #6f42c1 !important;
-        font-weight: 600;
-    }
-    .restore-btn {
-        display: inline-block;
-        padding: 10px 24px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .restore-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    }
-    .json-view {
-        background: #f8f9fa;
-        padding: 20px;
     }
 
     @media (max-width: 768px) {
