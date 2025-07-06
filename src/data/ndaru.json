@@ -210,6 +210,10 @@
                         {
                             "id": "skill_016",
                             "name": "Express.js"
+                        },
+                        {
+                            "id": "skill_017",
+                            "name": "Firebase"
                         }
                     ]
                 },
