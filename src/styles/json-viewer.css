@@ -5,8 +5,21 @@
 
 .json-viewer-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 15px;
+}
+
+.json-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.json-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
 }
 
 .json-back-btn {
@@ -32,13 +45,36 @@
     font-size: 0.9rem;
     font-family: "JetBrains Mono", "SF Mono", "Monaco", "Inconsolata", monospace;
     overflow-x: auto;
+    overflow-y: auto;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #a7a8aa;
     line-height: 1.5;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    white-space: pre;
+    max-height: 70vh;
+    position: relative;
+}
+
+/* Custom scrollbar untuk lebih rapi */
+.json-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.json-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.json-content::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+    border-radius: 4px;
+}
+
+.json-content::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
 }
 
 .json-key {
@@ -74,5 +110,19 @@
     .json-content {
         padding: 16px;
         font-size: 0.85rem;
+    }
+
+    .json-viewer-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .json-info {
+        width: 100%;
+    }
+
+    .json-title {
+        font-size: 1rem;
     }
 }

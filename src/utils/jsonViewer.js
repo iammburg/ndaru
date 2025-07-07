@@ -5,6 +5,7 @@ class JsonViewer {
         this.container = container;
         this.originalContent = null;
         this.isShowingJson = false;
+        this.scrollIndicatorTimeout = null;
     }
 
     syntaxHighlight(json) {
@@ -13,9 +14,9 @@ class JsonViewer {
         // Escape HTML
         json = json.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-        // Apply syntax highlighting
+        // Apply syntax highlighting with improved regex
         return json.replace(
-            /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\"])*"(\s*:)?|\b(true|false|null)\b|\d+)/g,
+            /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+\.?\d*([eE][+-]?\d+)?)/g,
             (match) => {
                 let className = "json-number";
 
@@ -45,7 +46,10 @@ class JsonViewer {
                 <div class="json-viewer-header">
                     <button id="json-back-btn" class="json-back-btn">Back to CV</button>
                 </div>
-                <div class="json-content">${highlightedJson}</div>
+                <div style="text-align: center;">
+                    <span>ndaru-resume.json</span>    
+                </div>
+                <div class="json-content" id="json-content">${highlightedJson}</div>
             </div>
         `;
 
