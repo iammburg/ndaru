@@ -393,7 +393,7 @@
                 "name": "Diara TimeSchool (Web-based Student Attendance and Points Application)",
                 "description": "Developing an automated student attendance application using Laravel and Flask that utilizes face recognition technology to improve attendance efficiency and accuracy. This system is developed using the Flask framework with the Python programming language and utilizes the FaceNet model for facial feature matching.",
                 "status": "in_progress",
-                "start_date": "2024-11",
+                "start_date": "2025-03",
                 "end_date": null,
                 "technologies": [
                     {
