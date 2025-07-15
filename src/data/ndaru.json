@@ -390,6 +390,34 @@
         "projects": [
             {
                 "id": "proj_001",
+                "name": "Diara TimeSchool (Web-based Student Attendance and Points Application)",
+                "description": "Developing an automated student attendance application using Laravel and Flask that utilizes face recognition technology to improve attendance efficiency and accuracy. This system is developed using the Flask framework with the Python programming language and utilizes the FaceNet model for facial feature matching.",
+                "status": "in_progress",
+                "start_date": "2024-11",
+                "end_date": null,
+                "technologies": [
+                    {
+                        "id": "tech_001",
+                        "name": "Laravel"
+                    },
+                    {
+                        "id": "tech_002",
+                        "name": "Flask"
+                    },
+                    {
+                        "id": "tech_003",
+                        "name": "Docker"
+                    }
+                ],
+                "repository": {
+                    "type": "github",
+                    "url": "https://www.diara.timeschool.co.id/",
+                    "display": "https://www.diara.timeschool.co.id/",
+                    "is_public": false
+                }
+            },
+            {
+                "id": "proj_002",
                 "name": "Eduwisata Daringan Kesongo",
                 "description": "Creating a management web app for Daringan Kesongo Kultur (Culinary Tourism in Semarang, Central Java)",
                 "status": "in_progress",
@@ -413,7 +441,7 @@
                 }
             },
             {
-                "id": "proj_002",
+                "id": "proj_003",
                 "name": "DailyDoa",
                 "description": "A website with 23 collections of Islamic daily prayers.",
                 "status": "in_progress",
@@ -441,7 +469,7 @@
                 }
             },
             {
-                "id": "proj_003",
+                "id": "proj_004",
                 "name": "Arena Connect Mobile App (Project Based Learning)",
                 "description": "Arena Connect is a mobile app that helps to find, select and booking sports fields. Easily booking badminton and futsal fields quickly and practically through the application.",
                 "status": "completed",
@@ -469,7 +497,7 @@
                 }
             },
             {
-                "id": "proj_004",
+                "id": "proj_005",
                 "name": "Simpatik 3 Landing Page",
                 "description": "Created a landing page for the Simpatik 3 Politeknik Negeri Semarang event",
                 "status": "completed",
@@ -497,7 +525,7 @@
                 }
             },
             {
-                "id": "proj_005",
+                "id": "proj_006",
                 "name": "Submission: Website Development Final Project (Dicoding.com)",
                 "description": "I created a website with the theme of Institut Teknologi Bandung for the submission of the class Learning Basic Web Programming (Belajar Dasar Pemrograman Web) from Dicoding.com",
                 "status": "completed",
@@ -521,7 +549,7 @@
                 }
             },
             {
-                "id": "proj_006",
+                "id": "proj_007",
                 "name": "Human Resources Information System",
                 "description": "Web-based Human Resources Information Systems Application made with Laravel.",
                 "status": "completed",
