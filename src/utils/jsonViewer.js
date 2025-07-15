@@ -47,7 +47,7 @@ class JsonViewer {
                     <button id="json-back-btn" class="json-back-btn">Back to CV</button>
                 </div>
                 <div style="text-align: center;">
-                    <span>ndaru-resume.json</span>    
+                    <span>ndaru_resume.json</span>    
                 </div>
                 <div class="json-content" id="json-content">${highlightedJson}</div>
             </div>
